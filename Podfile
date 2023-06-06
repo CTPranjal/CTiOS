@@ -7,7 +7,10 @@ target 'CTiOS' do
   pod 'CleverTapLocation'
   use_frameworks!
 
-
+  target 'richPush' do
+    pod 'CleverTap-iOS-SDK'
+    pod 'CTNotificationService'
+  end
   # Pods for CTiOS
 
 end

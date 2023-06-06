@@ -8,16 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		0F85F0993AE4C9EAB580788E /* Pods_CTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */; };
+		576D9DE6298666CCF940CAFE /* Pods_CTiOS_richPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */; };
 		F948660D2A14B4D300763861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F948660C2A14B4D300763861 /* AppDelegate.swift */; };
 		F948660F2A14B4D300763861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F948660E2A14B4D300763861 /* SceneDelegate.swift */; };
 		F94866112A14B4D300763861 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94866102A14B4D300763861 /* ViewController.swift */; };
 		F94866142A14B4D300763861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866122A14B4D300763861 /* Main.storyboard */; };
 		F94866162A14B4DA00763861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94866152A14B4DA00763861 /* Assets.xcassets */; };
 		F94866192A14B4DA00763861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866172A14B4DA00763861 /* LaunchScreen.storyboard */; };
+		F9E005D42A2E1C0600B86E43 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E005D32A2E1C0600B86E43 /* NotificationService.swift */; };
+		F9E005D82A2E1C0600B86E43 /* richPush.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F9E005D12A2E1C0600B86E43 /* richPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9E005D62A2E1C0600B86E43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F94866012A14B4D300763861 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E005D02A2E1C0600B86E43;
+			remoteInfo = richPush;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9E005D92A2E1C0700B86E43 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F9E005D82A2E1C0600B86E43 /* richPush.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.release.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.release.xcconfig"; sourceTree = "<group>"; };
+		66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_richPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.debug.xcconfig"; sourceTree = "<group>"; };
 		BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.release.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.release.xcconfig"; sourceTree = "<group>"; };
 		F94866092A14B4D300763861 /* CTiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +59,9 @@
 		F94866182A14B4DA00763861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F948661A2A14B4DA00763861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95E7D932A1B64480097E358 /* CTiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CTiOS.entitlements; sourceTree = "<group>"; };
+		F9E005D12A2E1C0600B86E43 /* richPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = richPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E005D32A2E1C0600B86E43 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F9E005D52A2E1C0600B86E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +73,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9E005CE2A2E1C0600B86E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576D9DE6298666CCF940CAFE /* Pods_CTiOS_richPush.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +89,8 @@
 			children = (
 				164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */,
 				D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */,
+				9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */,
+				3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -56,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */,
+				66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F948660B2A14B4D300763861 /* CTiOS */,
+				F9E005D22A2E1C0600B86E43 /* richPush */,
 				F948660A2A14B4D300763861 /* Products */,
 				0E51F6C0245CD00C154E2CEB /* Pods */,
 				E5ABA464F384EEA4F22639C3 /* Frameworks */,
@@ -74,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F94866092A14B4D300763861 /* CTiOS.app */,
+				F9E005D12A2E1C0600B86E43 /* richPush.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +139,15 @@
 			path = CTiOS;
 			sourceTree = "<group>";
 		};
+		F9E005D22A2E1C0600B86E43 /* richPush */ = {
+			isa = PBXGroup;
+			children = (
+				F9E005D32A2E1C0600B86E43 /* NotificationService.swift */,
+				F9E005D52A2E1C0600B86E43 /* Info.plist */,
+			);
+			path = richPush;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,15 +160,35 @@
 				F94866062A14B4D300763861 /* Frameworks */,
 				F94866072A14B4D300763861 /* Resources */,
 				BE24F0A6829542194390FE2C /* [CP] Embed Pods Frameworks */,
+				F9E005D92A2E1C0700B86E43 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F9E005D72A2E1C0600B86E43 /* PBXTargetDependency */,
 			);
 			name = CTiOS;
 			productName = CTiOS;
 			productReference = F94866092A14B4D300763861 /* CTiOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F9E005D02A2E1C0600B86E43 /* richPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E005DC2A2E1C0700B86E43 /* Build configuration list for PBXNativeTarget "richPush" */;
+			buildPhases = (
+				750BAD945E59CE61B86B12E0 /* [CP] Check Pods Manifest.lock */,
+				F9E005CD2A2E1C0600B86E43 /* Sources */,
+				F9E005CE2A2E1C0600B86E43 /* Frameworks */,
+				F9E005CF2A2E1C0600B86E43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = richPush;
+			productName = richPush;
+			productReference = F9E005D12A2E1C0600B86E43 /* richPush.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -126,6 +201,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					F94866082A14B4D300763861 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					F9E005D02A2E1C0600B86E43 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -144,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				F94866082A14B4D300763861 /* CTiOS */,
+				F9E005D02A2E1C0600B86E43 /* richPush */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +235,13 @@
 				F94866192A14B4DA00763861 /* LaunchScreen.storyboard in Resources */,
 				F94866162A14B4DA00763861 /* Assets.xcassets in Resources */,
 				F94866142A14B4D300763861 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E005CF2A2E1C0600B86E43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +264,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CTiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		750BAD945E59CE61B86B12E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CTiOS-richPush-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,7 +322,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9E005CD2A2E1C0600B86E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E005D42A2E1C0600B86E43 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9E005D72A2E1C0600B86E43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E005D02A2E1C0600B86E43 /* richPush */;
+			targetProxy = F9E005D62A2E1C0600B86E43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F94866122A14B4D300763861 /* Main.storyboard */ = {
@@ -354,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
@@ -385,6 +510,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
@@ -412,6 +538,58 @@
 			};
 			name = Release;
 		};
+		F9E005DA2A2E1C0700B86E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = richPush/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = richPush;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E005DB2A2E1C0700B86E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = richPush/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = richPush;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +607,15 @@
 			buildConfigurations = (
 				F948661E2A14B4DA00763861 /* Debug */,
 				F948661F2A14B4DA00763861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E005DC2A2E1C0700B86E43 /* Build configuration list for PBXNativeTarget "richPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E005DA2A2E1C0700B86E43 /* Debug */,
+				F9E005DB2A2E1C0700B86E43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
