@@ -40,6 +40,7 @@ static NSString *_timeZone;
 static NSString *_radio;
 static NSString *_deviceWidth;
 static NSString *_deviceHeight;
+static NSString *_signedCallSDKVersion;
 
 #if !CLEVERTAP_NO_REACHABILITY_SUPPORT
 SCNetworkReachabilityRef _reachability;
@@ -470,6 +471,14 @@ static void CleverTapReachabilityHandler(SCNetworkReachabilityRef target, SCNetw
     return radioValue;
 }
 #endif
+
+- (void)setSignedCallSDKVersion: (NSString *)version {
+    _signedCallSDKVersion = version;
+}
+
+- (NSString *)signedCallSDKVersion {
+    return _signedCallSDKVersion;
+}
 
 - (void)incrementLocalInAppCount {
     self.localInAppCount = self.localInAppCount + 1;

@@ -19,12 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         CleverTap.autoIntegrate()
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         registerForPush()
+        // register category with actions
+                let action1 = UNNotificationAction(identifier: "action_1", title: "Back", options: [])
+                let action2 = UNNotificationAction(identifier: "action_2", title: "Next", options: [])
+                let action3 = UNNotificationAction(identifier: "action_3", title: "View In App", options: [])
+                let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category])
         return true
     }
     
     func registerForPush() {
         // Register for Push notifications
         UNUserNotificationCenter.current().delegate = self
+        
+        
+        
         // request Permissions
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .badge, .alert], completionHandler: {granted, error in
             if granted {
@@ -35,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         })
         
         
-        // MARK: UISceneSession Lifecycle
+//         MARK: UISceneSession Lifecycle
         
         func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
             // Called when a new scene session is being created.

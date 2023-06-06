@@ -41,7 +41,7 @@
 - (void)handleMessageFromWebview:(NSDictionary<NSString *,id> *)message forInstance:(CleverTap *)cleverTap {
     NSString *action = [message objectForKey:@"action"];
     if ([action isEqual:@"recordEventWithProps"]) {
-        [cleverTap recordEvent: message[@"event"] withProps: message[@"properties"]];
+        [cleverTap recordEvent: message[@"event"] withProps: message[@"props"]];
     } else if ([action isEqual: @"profilePush"]) {
         [cleverTap profilePush: message[@"properties"]];
     } else if ([action isEqual: @"profileSetMultiValues"]) {

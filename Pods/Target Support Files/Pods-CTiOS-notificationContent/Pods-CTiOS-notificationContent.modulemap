@@ -1,0 +1,6 @@
+framework module Pods_CTiOS_notificationContent {
+  umbrella header "Pods-CTiOS-notificationContent-umbrella.h"
+
+  export *
+  module * { export * }
+}

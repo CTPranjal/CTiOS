@@ -1,6 +1,7 @@
 #import "CTProductConfigController.h"
 #import "CTConstants.h"
 #import "CTPreferences.h"
+#import "CTPreferences.h"
 #import "CleverTapInstanceConfig.h"
 #import "CleverTapProductConfigPrivate.h"
 

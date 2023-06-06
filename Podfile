@@ -11,6 +11,11 @@ target 'CTiOS' do
     pod 'CleverTap-iOS-SDK'
     pod 'CTNotificationService'
   end
+  
+  target 'notificationContent' do
+    pod 'CleverTap-iOS-SDK'
+    pod 'CTNotificationContent'
+end
   # Pods for CTiOS
 
 end
