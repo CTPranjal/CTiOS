@@ -5,7 +5,7 @@
 	<key>CleverTapAccountID</key>
 	<string>TEST-489-7K5-676Z</string>
 	<key>CleverTapDisableIDFV</key>
-	<true/>
+	<false/>
 	<key>CleverTapToken</key>
 	<string>TEST-53a-cb4</string>
 	<key>UIApplicationSceneManifest</key>

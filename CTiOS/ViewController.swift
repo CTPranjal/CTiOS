@@ -27,23 +27,18 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
         }
     
     @IBAction func Login(_ sender: Any) {
-//        let dob = NSDateComponents()
-//        dob.day = 07
-//        dob.month = 07
-//        dob.year = 2000
-//        let d = NSCalendar.currentCalendar.dateFromComponents(dob)
         let profile: Dictionary<String,Any> = [
             "Name": "CT Pranjal 🍣",
-            "Identity": "7",
-            "Email": "pranjal@clevertap.com",
+            "Identity": "117",
+            "Email": "",
             "Phone": "7737051770",
 //            "DOB": d! as AnyObject,
             "Gender": "F",
-            "Photo": "https://avatars.githubusercontent.com/u/66253465?v=4" as AnyObject,
+            "Photo": "//link" as AnyObject,
             //Update custom profile properties
             "MSG-push": true,
-            "Plan type": "Diamond",
-            "Favorite Food": "Sushi 🍣"
+            "Plan": "diamond",
+            "Food": "Sushi"
             
         ]
         CleverTap.sharedInstance()?.onUserLogin(profile)
@@ -90,12 +85,10 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
                 CleverTap.sharedInstance()?.recordChargedEvent(withDetails: chargeDetails, andItems: [item1, item2, item3])
             }
         CleverTap.sharedInstance()?.recordEvent("Charged")
-        print("push pressed")
     }
     
     @IBAction func Push(_ sender: Any) {
         CleverTap.sharedInstance()?.recordEvent("Push iOS")
-        print("push pressed")
     }
     
     func registerAppInbox() {
@@ -126,5 +119,9 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
 
     }
     
+    @IBAction func nps(_ sender: Any) {
+        CleverTap.sharedInstance()?.recordEvent("got nps")
+
+    }
 }
 

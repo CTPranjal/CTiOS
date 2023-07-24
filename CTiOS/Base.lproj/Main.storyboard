@@ -61,11 +61,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iup-9q-m0o">
-                                <rect key="frame" x="329" y="72" width="48" height="28"/>
+                                <rect key="frame" x="322" y="62" width="71" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="plain" title="✉️"/>
                                 <connections>
                                     <action selector="appInbox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6iC-Cq-h5q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LM-Ah-M6s">
+                                <rect key="frame" x="169" y="355" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NPS"/>
+                                <connections>
+                                    <action selector="nps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cq-9x-IXH"/>
                                 </connections>
                             </button>
                         </subviews>
