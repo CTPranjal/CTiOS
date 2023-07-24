@@ -13,7 +13,10 @@
 			<key>UNNotificationExtensionDefaultContentHidden</key>
 			<true/>
 			<key>UNNotificationExtensionCategory</key>
-			<string>CTNotification</string>
+			<array>
+				<string>ctTimer</string>
+				<string>CTNotification</string>
+			</array>
 			<key>UNNotificationExtensionInitialContentSizeRatio</key>
 			<real>0.1</real>
 		</dict>

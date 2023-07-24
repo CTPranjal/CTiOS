@@ -18,8 +18,9 @@ class NotificationViewController: CTNotificationViewController {
                 let action1 = UNNotificationAction(identifier: "action_4", title: "Back", options: [])
                 let action2 = UNNotificationAction(identifier: "action_5", title: "Next", options: [])
                 let action3 = UNNotificationAction(identifier: "action_6", title: "View In App", options: [])
-                let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([category])
+                //let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
+                let category2 = UNNotificationCategory(identifier: "ctTimer", actions: [], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category2])
         // Do any required interface initialization here.
     }
 
