@@ -28,18 +28,17 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     
     @IBAction func Login(_ sender: Any) {
         let profile: Dictionary<String,Any> = [
-            "Name": "CT Pranjal 🍣",
-            "Identity": "117",
-            "Email": "",
-            "Phone": "7737051770",
+            "Name": "Pranjal 🍣",
+            "Email": "helloyou@clevertap.com",
+            "Identity": "2510",
 //            "DOB": d! as AnyObject,
             "Gender": "F",
             "Photo": "//link" as AnyObject,
             //Update custom profile properties
             "MSG-push": true,
             "Plan": "diamond",
-            "Food": "Sushi"
-            
+            "Food": "$D_1696152345",
+            "endDate" : 1696205100
         ]
         CleverTap.sharedInstance()?.onUserLogin(profile)
     }
@@ -120,8 +119,7 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     }
     
     @IBAction func nps(_ sender: Any) {
-        CleverTap.sharedInstance()?.recordEvent("got nps")
-
+        CleverTap.sharedInstance()?.recordEvent("try77")
     }
 }
 

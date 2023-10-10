@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9E005D02A2E1C0600B86E43"
+               BlueprintIdentifier = "F914A18C2ACD7D98004D8D36"
                BuildableName = "richPush.appex"
                BlueprintName = "richPush"
                ReferencedContainer = "container:CTiOS.xcodeproj">

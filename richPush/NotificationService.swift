@@ -2,16 +2,21 @@
 //  NotificationService.swift
 //  richPush
 //
-//  Created by Pranjal Choudhary on 05/06/23.
+//  Created by Pranjal Choudhary on 04/10/23.
 //
 
-
-import CTNotificationService
+import UserNotifications
 import CleverTapSDK
+import CTNotificationService
 class NotificationService: CTNotificationServiceExtension {
-  var contentHandler: ((UNNotificationContent) -> Void)?
-  var bestAttemptContent: UNMutableNotificationContent?
-  override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-      super.didReceive(request, withContentHandler: contentHandler)
-  }
+
+    var contentHandler: ((UNNotificationContent) -> Void)?
+    var bestAttemptContent: UNMutableNotificationContent?
+
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
+        self.contentHandler = contentHandler
+        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData: request.content.userInfo)
+        super.didReceive(request, withContentHandler: contentHandler)
+    }
 }

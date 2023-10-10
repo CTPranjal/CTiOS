@@ -18,9 +18,9 @@ class NotificationViewController: CTNotificationViewController {
                 let action1 = UNNotificationAction(identifier: "action_4", title: "Back", options: [])
                 let action2 = UNNotificationAction(identifier: "action_5", title: "Next", options: [])
                 let action3 = UNNotificationAction(identifier: "action_6", title: "View In App", options: [])
-                //let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
+                let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
                 let category2 = UNNotificationCategory(identifier: "ctTimer", actions: [], intentIdentifiers: [], options: [])
-                UNUserNotificationCenter.current().setNotificationCategories([category2])
+                UNUserNotificationCenter.current().setNotificationCategories([category])
         // Do any required interface initialization here.
     }
 
@@ -40,10 +40,10 @@ class NotificationViewController: CTNotificationViewController {
         if (response?.actionIdentifier == "action_2") {
             CleverTap.sharedInstance()?.recordNotificationClickedEvent(withData: notificationPayload ?? "")
             let action1 = UNNotificationAction(identifier: "action_1", title: "Back", options: [])
-            //              let action2 = UNNotificationAction(identifier: "action_2", title: "Next", options: [])
-            //              let action3 = UNNotificationAction(identifier: "action_3", title: "View In App", options: [])
-            //              let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
-            //              UNUserNotificationCenter.current().setNotificationCategories([category])
+//            //              let action2 = UNNotificationAction(identifier: "action_2", title: "Next", options: [])
+//            //              let action3 = UNNotificationAction(identifier: "action_3", title: "View In App", options: [])
+//                          let category = UNNotificationCategory(identifier: "CTNotification", actions: [action1, action2, action3], intentIdentifiers: [], options: [])
+//            //              UNUserNotificationCenter.current().setNotificationCategories([category])
         }
     }
 

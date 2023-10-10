@@ -10,13 +10,36 @@ import CleverTapSDK
 import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    
-    
-    
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate,CleverTapURLDelegate {
+    func shouldHandleCleverTap(_ url: URL?, for channel: CleverTapChannel) -> Bool {
+        print("Handling URL: ----\(url!) for channel: \(channel)")
+       
+        return true
+    }
+        
+//    
+//    func shouldHandleCleverTap(_ url: URL?, for channel: CleverTapChannel) -> Bool {
+//       
+//    }
+////    
+//    func showAlert() {
+//           let alert = UIAlertController(title: "Logout?", message: "Are you sure you want to logout? You can login back to access your content.", preferredStyle: .alert)
+//             
+//           alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+//               //Cancel Action
+//           }))
+//           alert.addAction(UIAlertAction(title: "Logout",
+//                                         style: UIAlertAction.Style.default,
+//                                         handler: {(_: UIAlertAction!) in
+//                                           //Sign out action
+//           }))
+//            
+//
+//       }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CleverTap.autoIntegrate()
+        CleverTap.sharedInstance()?.setUrlDelegate(self)
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         registerForPush()
         return true
@@ -46,6 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
         }
         
+         // CleverTapURLDelegate method
+      
         func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
             // Called when the user discards a scene session.
             // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
@@ -74,7 +99,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
             
             NSLog("%@: will present notification: %@", self.description, notification.request.content.userInfo)
-            CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData: notification.request.content.userInfo)
             completionHandler([.badge, .sound, .alert])
         }
         
@@ -87,6 +111,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         func pushNotificationTapped(withCustomExtras customExtras: [AnyHashable : Any]!) {
             NSLog("pushNotificationTapped: customExtras: ", customExtras)
-        }
+        }       
     
 }
