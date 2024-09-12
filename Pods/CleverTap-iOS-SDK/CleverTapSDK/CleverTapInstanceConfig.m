@@ -2,6 +2,7 @@
 #import "CleverTapInstanceConfigPrivate.h"
 #import "CTPlistInfo.h"
 #import "CTConstants.h"
+#import "CTAES.h"
 
 @implementation CleverTapInstanceConfig
 
@@ -24,6 +25,10 @@
     [coder encodeObject: _queueLabel forKey:@"queueLabel"];
     [coder encodeBool: _isCreatedPostAppLaunched forKey:@"isCreatedPostAppLaunched"];
     [coder encodeBool: _beta forKey:@"beta"];
+    [coder encodeBool: _wv_init forKey:@"wv_init"];
+    [coder encodeInt: _encryptionLevel forKey:@"encryptionLevel"];
+    [coder encodeObject: _aesCrypt forKey:@"aesCrypt"];
+    [coder encodeBool:_enableFileProtection forKey:@"enableFileProtection"];
 }
 
 - (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {
@@ -45,6 +50,10 @@
         _queueLabel = [coder decodeObjectForKey:@"queueLabel"];
         _isCreatedPostAppLaunched = [coder decodeBoolForKey:@"isCreatedPostAppLaunched"];
         _beta = [coder decodeBoolForKey:@"beta"];
+        _wv_init = [coder decodeBoolForKey:@"wv_init"];
+        _encryptionLevel = [coder decodeIntForKey:@"encryptionLevel"];
+        _aesCrypt = [coder decodeObjectForKey:@"aesCrypt"];
+        _enableFileProtection = [coder decodeBoolForKey:@"enableFileProtection"];
     }
     return self;
 }
@@ -174,6 +183,9 @@
     copy.disableIDFV = self.disableIDFV;
     copy.identityKeys = self.identityKeys;
     copy.beta = self.beta;
+    copy.encryptionLevel = self.encryptionLevel;
+    copy.aesCrypt = self.aesCrypt;
+    copy.enableFileProtection = self.enableFileProtection;
     return copy;
 }
 
@@ -195,6 +207,11 @@
     _enablePersonalization = YES;
     _logLevel = 0;
     _beta = plist.beta;
+    _encryptionLevel = isDefault ? plist.encryptionLevel : CleverTapEncryptionNone;
+    _enableFileProtection = isDefault ? plist.enableFileProtection : NO;
+    if (isDefault) {
+        _aesCrypt = [[CTAES alloc] initWithAccountID:_accountId encryptionLevel:_encryptionLevel isDefaultInstance:isDefault];
+    }
 }
 
 - (void) checkIfAvailableAccountId:(NSString *)accountId
@@ -205,6 +222,23 @@
     
     if (accountToken.length <= 0) {
         CleverTapLogStaticInfo("CleverTap accountToken is empty");
+    }
+}
+
+- (void)setEncryptionLevel:(CleverTapEncryptionLevel)encryptionLevel {
+    if (!_isDefaultInstance) {
+        _encryptionLevel = encryptionLevel;
+        _aesCrypt = [[CTAES alloc] initWithAccountID:_accountId encryptionLevel:_encryptionLevel isDefaultInstance:_isDefaultInstance];
+    } else {
+        CleverTapLogStaticInfo("CleverTap Encryption level for default instance can't be updated from setEncryptionLevel method");
+    }
+}
+
+- (void)setEnableFileProtection:(BOOL)enableFileProtection {
+    if (!_isDefaultInstance) {
+        _enableFileProtection = enableFileProtection;
+    } else {
+        CleverTapLogStaticInfo("CleverTap enable file protection for default instance can't be updated from setEnableFileProtection method");
     }
 }
 @end

@@ -180,25 +180,22 @@ static NSManagedObjectContext *privateContext;
     
     BOOL hasMessages = ([[self.user.entity propertiesByName] objectForKey:@"messages"] != nil);
     if (!hasMessages) return nil;
-
-    [privateContext performBlockAndWait:^{
-        for (CTMessageMO *msg in self.user.messages) {
-            int ttl = (int)msg.expires;
-            if (ttl > 0 && now >= ttl) {
-                CleverTapLogStaticInternal(@"%@: message expires: %@, deleting", self, msg);
-                [toDelete addObject:msg];
-            } else {
-                [messages addObject:[msg toJSON]];
-            }
+    
+    for (CTMessageMO *msg in self.user.messages) {
+        int ttl = (int)msg.expires;
+        if (ttl > 0 && now >= ttl) {
+            CleverTapLogStaticInternal(@"%@: message expires: %@, deleting", self, msg);
+            [toDelete addObject:msg];
+        } else {
+            [messages addObject:[msg toJSON]];
         }
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
-        [messages sortUsingDescriptors:@[sortDescriptor]];
-        
-        if ([toDelete count] > 0) {
-            [self _deleteMessages:toDelete];
-        }
-        
-    }];
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    [messages sortUsingDescriptors:@[sortDescriptor]];
+    
+    if ([toDelete count] > 0) {
+        [self _deleteMessages:toDelete];
+    }
     return messages;
 }
 
@@ -211,26 +208,22 @@ static NSManagedObjectContext *privateContext;
     BOOL hasMessages = ([[self.user.entity propertiesByName] objectForKey:@"messages"] != nil);
     if (!hasMessages) return nil;
     
-    [privateContext performBlockAndWait:^{
-        NSOrderedSet *results = [self.user.messages filteredOrderedSetUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"isRead == NO"]]];
-        for (CTMessageMO *msg in results) {
-            int ttl = (int)msg.expires;
-            if (ttl > 0 && now >= ttl) {
-                CleverTapLogStaticInternal(@"%@: message expires: %@, deleting", self, msg);
-                [toDelete addObject:msg];
-            } else {
-                [messages addObject:[msg toJSON]];
-            }
+    NSOrderedSet *results = [self.user.messages filteredOrderedSetUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"isRead == NO"]]];
+    for (CTMessageMO *msg in results) {
+        int ttl = (int)msg.expires;
+        if (ttl > 0 && now >= ttl) {
+            CleverTapLogStaticInternal(@"%@: message expires: %@, deleting", self, msg);
+            [toDelete addObject:msg];
+        } else {
+            [messages addObject:[msg toJSON]];
         }
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
-        [messages sortUsingDescriptors:@[sortDescriptor]];
-        
-        if ([toDelete count] > 0) {
-            [self _deleteMessages:toDelete];
-        }
-    }];
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    [messages sortUsingDescriptors:@[sortDescriptor]];
     
-    
+    if ([toDelete count] > 0) {
+        [self _deleteMessages:toDelete];
+    }
     return messages;
 }
 
@@ -242,12 +235,8 @@ static NSManagedObjectContext *privateContext;
     
     BOOL hasMessages = ([[self.user.entity propertiesByName] objectForKey:@"messages"] != nil);
     if (!hasMessages) return nil;
-    __block NSOrderedSet *results;
     
-    [privateContext performBlockAndWait:^{
-        results = [self.user.messages filteredOrderedSetUsingPredicate:[NSPredicate predicateWithFormat:@"id == %@", messageId]];
-    }];
-    
+    NSOrderedSet *results = [self.user.messages filteredOrderedSetUsingPredicate:[NSPredicate predicateWithFormat:@"id == %@", messageId]];
     BOOL existing = results && [results count] > 0;
     return existing ? results[0] : nil;
 }
@@ -264,21 +253,16 @@ static NSManagedObjectContext *privateContext;
 
 // always call from inside privateContext performBlock
 - (BOOL)_save {
-    __block BOOL res = YES;
-    [privateContext performBlockAndWait:^{
-        NSError *error = nil;
-        res = [privateContext save:&error];
-        if (!res) {
-            CleverTapLogStaticDebug(@"Error saving core data main context: %@\n%@", [error localizedDescription], [error userInfo]);
-        }
-    }];
-    [mainContext performBlockAndWait:^{
-        NSError *error = nil;
-        res = [mainContext save:&error];
-        if (!res) {
-            CleverTapLogStaticDebug(@"Error saving core data main context: %@\n%@", [error localizedDescription], [error userInfo]);
-        }
-    }];
+    NSError *error = nil;
+    BOOL res = YES;
+    res = [privateContext save:&error];
+    if (!res) {
+        CleverTapLogStaticDebug(@"Error saving core data private context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    res = [mainContext save:&error];
+    if (!res) {
+        CleverTapLogStaticDebug(@"Error saving core data main context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
     return res;
 }
 

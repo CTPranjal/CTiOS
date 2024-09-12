@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ctnotificationcontent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CleverTap/CTNotificationContent.git",
+      "state" : {
+        "revision" : "af1a253f5a206ba87a7aec2047061223b18efda9",
+        "version" : "0.2.7"
+      }
+    }
+  ],
+  "version" : 2
+}

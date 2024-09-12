@@ -10,12 +10,25 @@ import CleverTapSDK
 
 class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
 
+    @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var showCtid: UILabel!
+
+    @IBOutlet weak var identiy_ct: UITextField!
+    @IBOutlet weak var email_ct: UITextField!
+    @IBOutlet weak var name_ct: UITextField!
+    @IBOutlet weak var phone_ct: UITextField!
+    //    @IBOutlet weak var get_identity: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         CleverTap.sharedInstance()?.recordEvent("iPhone Event")
+        if let cleverTapID = CleverTap.sharedInstance()?.profileGetID() {
+            showCtid.text = cleverTapID
+            print("CleverTap ID hello: \(String(describing: cleverTapID))")
+        } else {
+            showCtid.text = "Unable to retrieve CleverTap ID"
+        }
         initializeAppInbox()
-
     }
     
     func initializeAppInbox() {
@@ -26,19 +39,31 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
             }))
         }
     
+    @IBAction func identitysent(_ sender: Any) {
+        if let ctname = name_ct.text {
+           let name = ctname
+           print("Name is: \(name)")
+        }
+        if let ctidentity = identiy_ct.text {
+           let identity = ctidentity
+           print("Identity is: \(identity)")
+        }
+        if let ctemail = email_ct.text {
+           let email = ctemail
+           print("Email is: \(email)")
+        }
+        if let ctphone = phone_ct.text {
+           let phone = ctphone
+           print("Phone is: \(phone)")
+        }
+    }
+    
+    
     @IBAction func Login(_ sender: Any) {
         let profile: Dictionary<String,Any> = [
-            "Name": "Pranjal 🍣",
-            "Email": "helloyou@clevertap.com",
-            "Identity": "2510",
-//            "DOB": d! as AnyObject,
-            "Gender": "F",
-            "Photo": "//link" as AnyObject,
-            //Update custom profile properties
-            "MSG-push": true,
-            "Plan": "diamond",
-            "Food": "$D_1696152345",
-            "endDate" : 1696205100
+                
+                  "Email" : "pranjalpc@clevertap.com",
+                  "Phone" : "+917020384173"
         ]
         CleverTap.sharedInstance()?.onUserLogin(profile)
     }
@@ -87,7 +112,7 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     }
     
     @IBAction func Push(_ sender: Any) {
-        CleverTap.sharedInstance()?.recordEvent("Push iOS")
+        CleverTap.sharedInstance()?.recordEvent("t3")
     }
     
     func registerAppInbox() {

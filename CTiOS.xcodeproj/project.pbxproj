@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F85F0993AE4C9EAB580788E /* Pods_CTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */; };
-		310D33F6350DE3B496349AD1 /* Pods_CTiOS_notificationContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFBE64E13F7671D182A9958 /* Pods_CTiOS_notificationContent.framework */; };
-		C2F708712709C2B02A6CC61E /* Pods_CTiOS_richPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */; };
+		57DED68FF6B32E13C8EBAC50 /* Pods_CTiOS_richPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC72DECDBB89663BE290D830 /* Pods_CTiOS_richPush.framework */; };
+		C34DF5CB162918526746074E /* Pods_CTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC39D3CB01A6999DA95ED2A7 /* Pods_CTiOS.framework */; };
+		F90B5DD12C7F0532009A3137 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C5BEAC2A2F1B5D0052EDA5 /* UserNotifications.framework */; };
+		F90B5DD22C7F0532009A3137 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C5BEAE2A2F1B5D0052EDA5 /* UserNotificationsUI.framework */; };
+		F90B5DD52C7F0532009A3137 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90B5DD42C7F0532009A3137 /* NotificationViewController.swift */; };
+		F90B5DD82C7F0532009A3137 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90B5DD62C7F0532009A3137 /* MainInterface.storyboard */; };
+		F90B5DDC2C7F0532009A3137 /* richcontent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F90B5DD02C7F0532009A3137 /* richcontent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F90B5DE42C7F1599009A3137 /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F90B5DE32C7F1599009A3137 /* CTNotificationContent */; };
 		F914A1902ACD7D98004D8D36 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F914A18F2ACD7D98004D8D36 /* NotificationService.swift */; };
 		F914A1942ACD7D98004D8D36 /* richPush.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F914A18D2ACD7D98004D8D36 /* richPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F948660D2A14B4D300763861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F948660C2A14B4D300763861 /* AppDelegate.swift */; };
@@ -18,27 +23,26 @@
 		F94866142A14B4D300763861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866122A14B4D300763861 /* Main.storyboard */; };
 		F94866162A14B4DA00763861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94866152A14B4DA00763861 /* Assets.xcassets */; };
 		F94866192A14B4DA00763861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866172A14B4DA00763861 /* LaunchScreen.storyboard */; };
-		F9C5BEAD2A2F1B5D0052EDA5 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C5BEAC2A2F1B5D0052EDA5 /* UserNotifications.framework */; };
-		F9C5BEAF2A2F1B5D0052EDA5 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C5BEAE2A2F1B5D0052EDA5 /* UserNotificationsUI.framework */; };
-		F9C5BEB22A2F1B5D0052EDA5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C5BEB12A2F1B5D0052EDA5 /* NotificationViewController.swift */; };
-		F9C5BEB52A2F1B5D0052EDA5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C5BEB32A2F1B5D0052EDA5 /* MainInterface.storyboard */; };
-		F9C5BEB92A2F1B5D0052EDA5 /* notificationContent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F9C5BEAB2A2F1B5D0052EDA5 /* notificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F98A35902C242F3000673992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866122A14B4D300763861 /* Main.storyboard */; };
+		F98A35922C24338D00673992 /* clevertap-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A35912C24338D00673992 /* clevertap-logo.png */; };
+		F98A35942C24338D00673992 /* clevertap-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A35912C24338D00673992 /* clevertap-logo.png */; };
+		F99AC7122C9304010002D95F /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F99AC7112C9304010002D95F /* CTNotificationContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F90B5DDA2C7F0532009A3137 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F94866012A14B4D300763861 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F90B5DCF2C7F0532009A3137;
+			remoteInfo = richcontent;
+		};
 		F914A1922ACD7D98004D8D36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F94866012A14B4D300763861 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F914A18C2ACD7D98004D8D36;
 			remoteInfo = richPush;
-		};
-		F9C5BEB72A2F1B5D0052EDA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F94866012A14B4D300763861 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9C5BEAA2A2F1B5D0052EDA5;
-			remoteInfo = notificationContent;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -49,8 +53,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				F90B5DDC2C7F0532009A3137 /* richcontent.appex in Embed Foundation Extensions */,
 				F914A1942ACD7D98004D8D36 /* richPush.appex in Embed Foundation Extensions */,
-				F9C5BEB92A2F1B5D0052EDA5 /* notificationContent.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,15 +62,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0FF9A993F73AA08F2E9EF0D9 /* Pods-CTiOS-notificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-notificationContent.release.xcconfig"; path = "Target Support Files/Pods-CTiOS-notificationContent/Pods-CTiOS-notificationContent.release.xcconfig"; sourceTree = "<group>"; };
-		164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.release.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.release.xcconfig"; sourceTree = "<group>"; };
-		4DFBE64E13F7671D182A9958 /* Pods_CTiOS_notificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_notificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_richPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95331677B3BF63236E5273C3 /* Pods-CTiOS-notificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-notificationContent.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS-notificationContent/Pods-CTiOS-notificationContent.debug.xcconfig"; sourceTree = "<group>"; };
-		9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.debug.xcconfig"; sourceTree = "<group>"; };
-		BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.release.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.release.xcconfig"; sourceTree = "<group>"; };
+		0C8021D059759140FDE092A6 /* Pods-CTiOS-richPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.release.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.release.xcconfig"; sourceTree = "<group>"; };
+		0FAC7FFC7BA797FAFBEE426C /* Pods-CTiOS-richPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-richPush.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS-richPush/Pods-CTiOS-richPush.debug.xcconfig"; sourceTree = "<group>"; };
+		2E5BE407AE125B18E68FC7AA /* Pods-CTiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6758F0A9313A4D205AE14D91 /* Pods-CTiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS.release.xcconfig"; path = "Target Support Files/Pods-CTiOS/Pods-CTiOS.release.xcconfig"; sourceTree = "<group>"; };
+		8A739071BD0C86DF9177019B /* Pods-CTiOS-notificationContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-notificationContent.release.xcconfig"; path = "Target Support Files/Pods-CTiOS-notificationContent/Pods-CTiOS-notificationContent.release.xcconfig"; sourceTree = "<group>"; };
+		B5602B1D48B3437761C8D300 /* Pods-CTiOS-notificationContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTiOS-notificationContent.debug.xcconfig"; path = "Target Support Files/Pods-CTiOS-notificationContent/Pods-CTiOS-notificationContent.debug.xcconfig"; sourceTree = "<group>"; };
+		BC39D3CB01A6999DA95ED2A7 /* Pods_CTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBFFE7D3630613EFC67A6FCE /* Pods_CTiOS_notificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_notificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90B5DD02C7F0532009A3137 /* richcontent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = richcontent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90B5DD42C7F0532009A3137 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		F90B5DD72C7F0532009A3137 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F90B5DD92C7F0532009A3137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F914A18D2ACD7D98004D8D36 /* richPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = richPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F914A18F2ACD7D98004D8D36 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F914A1912ACD7D98004D8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,20 +86,28 @@
 		F94866182A14B4DA00763861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F948661A2A14B4DA00763861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95E7D932A1B64480097E358 /* CTiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CTiOS.entitlements; sourceTree = "<group>"; };
-		F9C5BEAB2A2F1B5D0052EDA5 /* notificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F98A35912C24338D00673992 /* clevertap-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clevertap-logo.png"; sourceTree = "<group>"; };
 		F9C5BEAC2A2F1B5D0052EDA5 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		F9C5BEAE2A2F1B5D0052EDA5 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
-		F9C5BEB12A2F1B5D0052EDA5 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
-		F9C5BEB42A2F1B5D0052EDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		F9C5BEB62A2F1B5D0052EDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC72DECDBB89663BE290D830 /* Pods_CTiOS_richPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_richPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F90B5DCD2C7F0532009A3137 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90B5DD22C7F0532009A3137 /* UserNotificationsUI.framework in Frameworks */,
+				F99AC7122C9304010002D95F /* CTNotificationContent in Frameworks */,
+				F90B5DD12C7F0532009A3137 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F914A18A2ACD7D98004D8D36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2F708712709C2B02A6CC61E /* Pods_CTiOS_richPush.framework in Frameworks */,
+				57DED68FF6B32E13C8EBAC50 /* Pods_CTiOS_richPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,17 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F85F0993AE4C9EAB580788E /* Pods_CTiOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9C5BEA82A2F1B5D0052EDA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9C5BEAF2A2F1B5D0052EDA5 /* UserNotificationsUI.framework in Frameworks */,
-				F9C5BEAD2A2F1B5D0052EDA5 /* UserNotifications.framework in Frameworks */,
-				310D33F6350DE3B496349AD1 /* Pods_CTiOS_notificationContent.framework in Frameworks */,
+				F90B5DE42C7F1599009A3137 /* CTNotificationContent in Frameworks */,
+				C34DF5CB162918526746074E /* Pods_CTiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,12 +126,12 @@
 		0E51F6C0245CD00C154E2CEB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */,
-				D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */,
-				9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */,
-				3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */,
-				95331677B3BF63236E5273C3 /* Pods-CTiOS-notificationContent.debug.xcconfig */,
-				0FF9A993F73AA08F2E9EF0D9 /* Pods-CTiOS-notificationContent.release.xcconfig */,
+				2E5BE407AE125B18E68FC7AA /* Pods-CTiOS.debug.xcconfig */,
+				6758F0A9313A4D205AE14D91 /* Pods-CTiOS.release.xcconfig */,
+				B5602B1D48B3437761C8D300 /* Pods-CTiOS-notificationContent.debug.xcconfig */,
+				8A739071BD0C86DF9177019B /* Pods-CTiOS-notificationContent.release.xcconfig */,
+				0FAC7FFC7BA797FAFBEE426C /* Pods-CTiOS-richPush.debug.xcconfig */,
+				0C8021D059759140FDE092A6 /* Pods-CTiOS-richPush.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -133,13 +139,23 @@
 		E5ABA464F384EEA4F22639C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE23F6DB24D26F7751BF1A00 /* Pods_CTiOS.framework */,
-				66C9333EBC49F8D34282B9F8 /* Pods_CTiOS_richPush.framework */,
 				F9C5BEAC2A2F1B5D0052EDA5 /* UserNotifications.framework */,
 				F9C5BEAE2A2F1B5D0052EDA5 /* UserNotificationsUI.framework */,
-				4DFBE64E13F7671D182A9958 /* Pods_CTiOS_notificationContent.framework */,
+				BC39D3CB01A6999DA95ED2A7 /* Pods_CTiOS.framework */,
+				CBFFE7D3630613EFC67A6FCE /* Pods_CTiOS_notificationContent.framework */,
+				FC72DECDBB89663BE290D830 /* Pods_CTiOS_richPush.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F90B5DD32C7F0532009A3137 /* richcontent */ = {
+			isa = PBXGroup;
+			children = (
+				F90B5DD42C7F0532009A3137 /* NotificationViewController.swift */,
+				F90B5DD62C7F0532009A3137 /* MainInterface.storyboard */,
+				F90B5DD92C7F0532009A3137 /* Info.plist */,
+			);
+			path = richcontent;
 			sourceTree = "<group>";
 		};
 		F914A18E2ACD7D98004D8D36 /* richPush */ = {
@@ -155,8 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				F948660B2A14B4D300763861 /* CTiOS */,
-				F9C5BEB02A2F1B5D0052EDA5 /* notificationContent */,
 				F914A18E2ACD7D98004D8D36 /* richPush */,
+				F90B5DD32C7F0532009A3137 /* richcontent */,
 				F948660A2A14B4D300763861 /* Products */,
 				0E51F6C0245CD00C154E2CEB /* Pods */,
 				E5ABA464F384EEA4F22639C3 /* Frameworks */,
@@ -167,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				F94866092A14B4D300763861 /* CTiOS.app */,
-				F9C5BEAB2A2F1B5D0052EDA5 /* notificationContent.appex */,
 				F914A18D2ACD7D98004D8D36 /* richPush.appex */,
+				F90B5DD02C7F0532009A3137 /* richcontent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,28 +200,39 @@
 				F94866152A14B4DA00763861 /* Assets.xcassets */,
 				F94866172A14B4DA00763861 /* LaunchScreen.storyboard */,
 				F948661A2A14B4DA00763861 /* Info.plist */,
+				F98A35912C24338D00673992 /* clevertap-logo.png */,
 			);
 			path = CTiOS;
-			sourceTree = "<group>";
-		};
-		F9C5BEB02A2F1B5D0052EDA5 /* notificationContent */ = {
-			isa = PBXGroup;
-			children = (
-				F9C5BEB12A2F1B5D0052EDA5 /* NotificationViewController.swift */,
-				F9C5BEB32A2F1B5D0052EDA5 /* MainInterface.storyboard */,
-				F9C5BEB62A2F1B5D0052EDA5 /* Info.plist */,
-			);
-			path = notificationContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F90B5DCF2C7F0532009A3137 /* richcontent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90B5DDF2C7F0532009A3137 /* Build configuration list for PBXNativeTarget "richcontent" */;
+			buildPhases = (
+				F90B5DCC2C7F0532009A3137 /* Sources */,
+				F90B5DCD2C7F0532009A3137 /* Frameworks */,
+				F90B5DCE2C7F0532009A3137 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = richcontent;
+			packageProductDependencies = (
+				F99AC7112C9304010002D95F /* CTNotificationContent */,
+			);
+			productName = richcontent;
+			productReference = F90B5DD02C7F0532009A3137 /* richcontent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F914A18C2ACD7D98004D8D36 /* richPush */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F914A1952ACD7D98004D8D36 /* Build configuration list for PBXNativeTarget "richPush" */;
 			buildPhases = (
-				7A4F1CB90315CF2F27C65768 /* [CP] Check Pods Manifest.lock */,
+				2D9A1F4E05A50324FFFE39AC /* [CP] Check Pods Manifest.lock */,
 				F914A1892ACD7D98004D8D36 /* Sources */,
 				F914A18A2ACD7D98004D8D36 /* Frameworks */,
 				F914A18B2ACD7D98004D8D36 /* Resources */,
@@ -223,41 +250,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F948661D2A14B4DA00763861 /* Build configuration list for PBXNativeTarget "CTiOS" */;
 			buildPhases = (
-				69A222756092D8BEAAC0DF9F /* [CP] Check Pods Manifest.lock */,
+				29DAEC62AF3D789DBAD0612F /* [CP] Check Pods Manifest.lock */,
 				F94866052A14B4D300763861 /* Sources */,
 				F94866062A14B4D300763861 /* Frameworks */,
 				F94866072A14B4D300763861 /* Resources */,
-				BE24F0A6829542194390FE2C /* [CP] Embed Pods Frameworks */,
 				F9E005D92A2E1C0700B86E43 /* Embed Foundation Extensions */,
+				675A62CA39D0469E15747B18 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9C5BEB82A2F1B5D0052EDA5 /* PBXTargetDependency */,
 				F914A1932ACD7D98004D8D36 /* PBXTargetDependency */,
+				F90B5DDB2C7F0532009A3137 /* PBXTargetDependency */,
 			);
 			name = CTiOS;
+			packageProductDependencies = (
+				F90B5DE32C7F1599009A3137 /* CTNotificationContent */,
+			);
 			productName = CTiOS;
 			productReference = F94866092A14B4D300763861 /* CTiOS.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F9C5BEAA2A2F1B5D0052EDA5 /* notificationContent */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9C5BEBC2A2F1B5E0052EDA5 /* Build configuration list for PBXNativeTarget "notificationContent" */;
-			buildPhases = (
-				810F07F6DEE3ED6446D5ED87 /* [CP] Check Pods Manifest.lock */,
-				F9C5BEA72A2F1B5D0052EDA5 /* Sources */,
-				F9C5BEA82A2F1B5D0052EDA5 /* Frameworks */,
-				F9C5BEA92A2F1B5D0052EDA5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = notificationContent;
-			productName = notificationContent;
-			productReference = F9C5BEAB2A2F1B5D0052EDA5 /* notificationContent.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,16 +278,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					F90B5DCF2C7F0532009A3137 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					F914A18C2ACD7D98004D8D36 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 					F94866082A14B4D300763861 = {
-						CreatedOnToolsVersion = 14.3;
-					};
-					F9C5BEAA2A2F1B5D0052EDA5 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -289,22 +301,35 @@
 				Base,
 			);
 			mainGroup = F94866002A14B4D300763861;
+			packageReferences = (
+				F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */,
+			);
 			productRefGroup = F948660A2A14B4D300763861 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F94866082A14B4D300763861 /* CTiOS */,
-				F9C5BEAA2A2F1B5D0052EDA5 /* notificationContent */,
 				F914A18C2ACD7D98004D8D36 /* richPush */,
+				F90B5DCF2C7F0532009A3137 /* richcontent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F90B5DCE2C7F0532009A3137 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90B5DD82C7F0532009A3137 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F914A18B2ACD7D98004D8D36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98A35942C24338D00673992 /* clevertap-logo.png in Resources */,
+				F98A35902C242F3000673992 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,21 +340,14 @@
 				F94866192A14B4DA00763861 /* LaunchScreen.storyboard in Resources */,
 				F94866162A14B4DA00763861 /* Assets.xcassets in Resources */,
 				F94866142A14B4D300763861 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9C5BEA92A2F1B5D0052EDA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9C5BEB52A2F1B5D0052EDA5 /* MainInterface.storyboard in Resources */,
+				F98A35922C24338D00673992 /* clevertap-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69A222756092D8BEAAC0DF9F /* [CP] Check Pods Manifest.lock */ = {
+		29DAEC62AF3D789DBAD0612F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,7 +369,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A4F1CB90315CF2F27C65768 /* [CP] Check Pods Manifest.lock */ = {
+		2D9A1F4E05A50324FFFE39AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,29 +391,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		810F07F6DEE3ED6446D5ED87 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CTiOS-notificationContent-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE24F0A6829542194390FE2C /* [CP] Embed Pods Frameworks */ = {
+		675A62CA39D0469E15747B18 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,6 +411,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F90B5DCC2C7F0532009A3137 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90B5DD52C7F0532009A3137 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F914A1892ACD7D98004D8D36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,30 +437,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9C5BEA72A2F1B5D0052EDA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9C5BEB22A2F1B5D0052EDA5 /* NotificationViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F90B5DDB2C7F0532009A3137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F90B5DCF2C7F0532009A3137 /* richcontent */;
+			targetProxy = F90B5DDA2C7F0532009A3137 /* PBXContainerItemProxy */;
+		};
 		F914A1932ACD7D98004D8D36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F914A18C2ACD7D98004D8D36 /* richPush */;
 			targetProxy = F914A1922ACD7D98004D8D36 /* PBXContainerItemProxy */;
 		};
-		F9C5BEB82A2F1B5D0052EDA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9C5BEAA2A2F1B5D0052EDA5 /* notificationContent */;
-			targetProxy = F9C5BEB72A2F1B5D0052EDA5 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F90B5DD62C7F0532009A3137 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F90B5DD72C7F0532009A3137 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F94866122A14B4D300763861 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -473,32 +477,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		F9C5BEB32A2F1B5D0052EDA5 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9C5BEB42A2F1B5D0052EDA5 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F914A1962ACD7D98004D8D36 /* Debug */ = {
+		F90B5DDD2C7F0532009A3137 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B652D78608C8D343CF1CF82 /* Pods-CTiOS-richPush.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = richPush/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = richPush;
+				INFOPLIST_FILE = richcontent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = richcontent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +500,68 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richcontent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F90B5DDE2C7F0532009A3137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = richcontent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = richcontent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richcontent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F914A1962ACD7D98004D8D36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FAC7FFC7BA797FAFBEE426C /* Pods-CTiOS-richPush.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = richPush/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = richPush;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -518,19 +573,19 @@
 		};
 		F914A1972ACD7D98004D8D36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A2B7278BC0654140DDB49B0 /* Pods-CTiOS-richPush.release.xcconfig */;
+			baseConfigurationReference = 0C8021D059759140FDE092A6 /* Pods-CTiOS-richPush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = richPush/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = richPush;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,7 +593,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richPush";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -551,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -611,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -663,7 +720,7 @@
 		};
 		F948661E2A14B4DA00763861 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 164ED99EBD550293ED403864 /* Pods-CTiOS.debug.xcconfig */;
+			baseConfigurationReference = 2E5BE407AE125B18E68FC7AA /* Pods-CTiOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -671,7 +728,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CTiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -679,13 +736,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -695,7 +752,7 @@
 		};
 		F948661F2A14B4DA00763861 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1B4AD57129F9534E08B2483 /* Pods-CTiOS.release.xcconfig */;
+			baseConfigurationReference = 6758F0A9313A4D205AE14D91 /* Pods-CTiOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -703,7 +760,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CTiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -711,66 +768,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F9C5BEBA2A2F1B5E0052EDA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95331677B3BF63236E5273C3 /* Pods-CTiOS-notificationContent.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notificationContent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = notificationContent;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.notificationContent;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F9C5BEBB2A2F1B5E0052EDA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FF9A993F73AA08F2E9EF0D9 /* Pods-CTiOS-notificationContent.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6MY4LZCCZA;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = notificationContent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = notificationContent;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.notificationContent;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -780,6 +785,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F90B5DDF2C7F0532009A3137 /* Build configuration list for PBXNativeTarget "richcontent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F90B5DDD2C7F0532009A3137 /* Debug */,
+				F90B5DDE2C7F0532009A3137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F914A1952ACD7D98004D8D36 /* Build configuration list for PBXNativeTarget "richPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -807,16 +821,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9C5BEBC2A2F1B5E0052EDA5 /* Build configuration list for PBXNativeTarget "notificationContent" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9C5BEBA2A2F1B5E0052EDA5 /* Debug */,
-				F9C5BEBB2A2F1B5E0052EDA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CleverTap/CTNotificationContent.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F90B5DE32C7F1599009A3137 /* CTNotificationContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
+			productName = CTNotificationContent;
+		};
+		F99AC7112C9304010002D95F /* CTNotificationContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
+			productName = CTNotificationContent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F94866012A14B4D300763861 /* Project object */;
 }
