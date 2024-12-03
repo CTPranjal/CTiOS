@@ -14,9 +14,11 @@
 		F90B5DD52C7F0532009A3137 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90B5DD42C7F0532009A3137 /* NotificationViewController.swift */; };
 		F90B5DD82C7F0532009A3137 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90B5DD62C7F0532009A3137 /* MainInterface.storyboard */; };
 		F90B5DDC2C7F0532009A3137 /* richcontent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F90B5DD02C7F0532009A3137 /* richcontent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F90B5DE42C7F1599009A3137 /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F90B5DE32C7F1599009A3137 /* CTNotificationContent */; };
 		F914A1902ACD7D98004D8D36 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F914A18F2ACD7D98004D8D36 /* NotificationService.swift */; };
 		F914A1942ACD7D98004D8D36 /* richPush.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F914A18D2ACD7D98004D8D36 /* richPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F932C7E62CC136FD00D6872D /* clevertap-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F932C7E52CC136FD00D6872D /* clevertap-1.png */; };
+		F932C7E72CC136FD00D6872D /* clevertap-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F932C7E52CC136FD00D6872D /* clevertap-1.png */; };
+		F932C7E82CC136FD00D6872D /* clevertap-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F932C7E52CC136FD00D6872D /* clevertap-1.png */; };
 		F948660D2A14B4D300763861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F948660C2A14B4D300763861 /* AppDelegate.swift */; };
 		F948660F2A14B4D300763861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F948660E2A14B4D300763861 /* SceneDelegate.swift */; };
 		F94866112A14B4D300763861 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94866102A14B4D300763861 /* ViewController.swift */; };
@@ -26,7 +28,9 @@
 		F98A35902C242F3000673992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94866122A14B4D300763861 /* Main.storyboard */; };
 		F98A35922C24338D00673992 /* clevertap-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A35912C24338D00673992 /* clevertap-logo.png */; };
 		F98A35942C24338D00673992 /* clevertap-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A35912C24338D00673992 /* clevertap-logo.png */; };
-		F99AC7122C9304010002D95F /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F99AC7112C9304010002D95F /* CTNotificationContent */; };
+		F99C9FD72CFD739600E73923 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99C9FD62CFD739600E73923 /* secondView.swift */; };
+		F99F92E82CEDACBF00178D4F /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F99F92E72CEDACBF00178D4F /* CTNotificationContent */; };
+		F99F92EA2CEDACC600178D4F /* CTNotificationContent in Frameworks */ = {isa = PBXBuildFile; productRef = F99F92E92CEDACC600178D4F /* CTNotificationContent */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,7 @@
 		F914A18D2ACD7D98004D8D36 /* richPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = richPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F914A18F2ACD7D98004D8D36 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F914A1912ACD7D98004D8D36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F932C7E52CC136FD00D6872D /* clevertap-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clevertap-1.png"; sourceTree = "<group>"; };
 		F94866092A14B4D300763861 /* CTiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F948660C2A14B4D300763861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F948660E2A14B4D300763861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		F948661A2A14B4DA00763861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F95E7D932A1B64480097E358 /* CTiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CTiOS.entitlements; sourceTree = "<group>"; };
 		F98A35912C24338D00673992 /* clevertap-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clevertap-logo.png"; sourceTree = "<group>"; };
+		F99C9FD62CFD739600E73923 /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		F9C5BEAC2A2F1B5D0052EDA5 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		F9C5BEAE2A2F1B5D0052EDA5 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		FC72DECDBB89663BE290D830 /* Pods_CTiOS_richPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTiOS_richPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F90B5DD22C7F0532009A3137 /* UserNotificationsUI.framework in Frameworks */,
-				F99AC7122C9304010002D95F /* CTNotificationContent in Frameworks */,
+				F99F92EA2CEDACC600178D4F /* CTNotificationContent in Frameworks */,
 				F90B5DD12C7F0532009A3137 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90B5DE42C7F1599009A3137 /* CTNotificationContent in Frameworks */,
+				F99F92E82CEDACBF00178D4F /* CTNotificationContent in Frameworks */,
 				C34DF5CB162918526746074E /* Pods_CTiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,7 +206,9 @@
 				F94866152A14B4DA00763861 /* Assets.xcassets */,
 				F94866172A14B4DA00763861 /* LaunchScreen.storyboard */,
 				F948661A2A14B4DA00763861 /* Info.plist */,
+				F932C7E52CC136FD00D6872D /* clevertap-1.png */,
 				F98A35912C24338D00673992 /* clevertap-logo.png */,
+				F99C9FD62CFD739600E73923 /* secondView.swift */,
 			);
 			path = CTiOS;
 			sourceTree = "<group>";
@@ -222,7 +230,7 @@
 			);
 			name = richcontent;
 			packageProductDependencies = (
-				F99AC7112C9304010002D95F /* CTNotificationContent */,
+				F99F92E92CEDACC600178D4F /* CTNotificationContent */,
 			);
 			productName = richcontent;
 			productReference = F90B5DD02C7F0532009A3137 /* richcontent.appex */;
@@ -265,7 +273,7 @@
 			);
 			name = CTiOS;
 			packageProductDependencies = (
-				F90B5DE32C7F1599009A3137 /* CTNotificationContent */,
+				F99F92E72CEDACBF00178D4F /* CTNotificationContent */,
 			);
 			productName = CTiOS;
 			productReference = F94866092A14B4D300763861 /* CTiOS.app */;
@@ -302,7 +310,7 @@
 			);
 			mainGroup = F94866002A14B4D300763861;
 			packageReferences = (
-				F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */,
+				F988DE632CECB63500E9CAA8 /* XCRemoteSwiftPackageReference "CTNotificationContent" */,
 			);
 			productRefGroup = F948660A2A14B4D300763861 /* Products */;
 			projectDirPath = "";
@@ -320,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F932C7E82CC136FD00D6872D /* clevertap-1.png in Resources */,
 				F90B5DD82C7F0532009A3137 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +339,7 @@
 			files = (
 				F98A35942C24338D00673992 /* clevertap-logo.png in Resources */,
 				F98A35902C242F3000673992 /* Main.storyboard in Resources */,
+				F932C7E72CC136FD00D6872D /* clevertap-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 				F94866192A14B4DA00763861 /* LaunchScreen.storyboard in Resources */,
 				F94866162A14B4DA00763861 /* Assets.xcassets in Resources */,
 				F94866142A14B4D300763861 /* Main.storyboard in Resources */,
+				F932C7E62CC136FD00D6872D /* clevertap-1.png in Resources */,
 				F98A35922C24338D00673992 /* clevertap-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +444,7 @@
 			files = (
 				F94866112A14B4D300763861 /* ViewController.swift in Sources */,
 				F948660D2A14B4D300763861 /* AppDelegate.swift in Sources */,
+				F99C9FD72CFD739600E73923 /* secondView.swift in Sources */,
 				F948660F2A14B4D300763861 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +497,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -500,7 +512,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richcontent";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richcontent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -515,7 +527,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -530,7 +542,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richcontent";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richcontent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -546,7 +558,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -561,7 +573,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richPush";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -578,7 +590,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -593,7 +605,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios.richPush";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS.richPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -728,7 +740,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CTiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -742,7 +754,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -760,7 +772,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTiOS/CTiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7XM67G79YA;
+				DEVELOPMENT_TEAM = 6MY4LZCCZA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CTiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -774,7 +786,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.deven.Clevertap-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clevertap.CTiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -824,7 +836,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */ = {
+		F988DE632CECB63500E9CAA8 /* XCRemoteSwiftPackageReference "CTNotificationContent" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CleverTap/CTNotificationContent.git";
 			requirement = {
@@ -835,14 +847,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F90B5DE32C7F1599009A3137 /* CTNotificationContent */ = {
+		F99F92E72CEDACBF00178D4F /* CTNotificationContent */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
+			package = F988DE632CECB63500E9CAA8 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
 			productName = CTNotificationContent;
 		};
-		F99AC7112C9304010002D95F /* CTNotificationContent */ = {
+		F99F92E92CEDACC600178D4F /* CTNotificationContent */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F90B5DE02C7F0575009A3137 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
+			package = F988DE632CECB63500E9CAA8 /* XCRemoteSwiftPackageReference "CTNotificationContent" */;
 			productName = CTNotificationContent;
 		};
 /* End XCSwiftPackageProductDependency section */

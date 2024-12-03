@@ -1,4 +1,5 @@
 {
+  "originHash" : "7018029a5c99ce252d451ae375003784f57a9c5ecc3c30366ed94d66d40ceadc",
   "pins" : [
     {
       "identity" : "ctnotificationcontent",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
