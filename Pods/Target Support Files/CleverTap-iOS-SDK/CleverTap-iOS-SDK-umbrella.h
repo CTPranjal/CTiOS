@@ -41,7 +41,6 @@
 #import "CTCustomTemplate.h"
 #import "CTTemplateContext.h"
 #import "CTCustomTemplatesManager.h"
-#import "CTJsonTemplateProducer.h"
 
 FOUNDATION_EXPORT double CleverTapSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CleverTapSDKVersionString[];

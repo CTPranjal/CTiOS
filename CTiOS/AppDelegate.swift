@@ -12,7 +12,6 @@ import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate,CleverTapURLDelegate {
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CleverTap.autoIntegrate()
@@ -36,9 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func registerForPush() {
         // Register for Push notifications
         UNUserNotificationCenter.current().delegate = self
-        
-        
-        
         // request Permissions
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .badge, .alert], completionHandler: {granted, error in
             if granted {
@@ -47,8 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
             }
         })
-        
-        
         //         MARK: UISceneSession Lifecycle
         
         func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -78,6 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         
+        UnreadBadgeManager.shared.decrementBadgeCount()
+        
         NSLog("%@: did receive notification response: %@", self.description, response.notification.request.content.userInfo)
         
         //            CleverTap.sharedInstance()?.handleNotification(withData: response.notification.request.content.userInfo)
@@ -86,46 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         completionHandler()
     }
-    
-    //    func handleCleverTapNotification(userInfo: [AnyHashable: Any]) {
-    //        // Extract CleverTap's deep link key (wzrk_dl)
-    //        if let deepLink = userInfo["wzrk_dl"] as? String, let url = URL(string: deepLink) {
-    //            handleDeepLink(url: url)
-    //        } else {
-    //            print("No deep link found in CleverTap notification.")
-    //        }
-    //    }
-    //
-    //    func handleDeepLink(url: URL) {
-    //        guard let scheme = url.scheme, scheme == "myapp" else {
-    //            print("Invalid deep link scheme.")
-    //            return
-    //        }
-    //
-    //        let host = url.host
-    //        let pathComponents = url.pathComponents
-    //
-    //        if host == "feature1" {
-    //            navigateToFeature1()
-    //        } else if host == "feature2" {
-    //            navigateToFeature2(with: pathComponents)
-    //        } else {
-    //            print("Unknown deep link host.")
-    //        }
-    //    }
-    //
-    //    func navigateToFeature1() {
-    //        if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
-    //            let featureVC = Feature1ViewController()
-    //            rootVC.present(featureVC, animated: true)
-    //        }
-    //    }
-    //
-    //    func navigateToFeature2(with pathComponents: [String]) {
-    //        // Navigate based on deeper paths if needed
-    //    }
-    
-    
+ 
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -159,20 +116,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 if path == "secondView" {
                     // Navigate to SecondView
                     print("Navigating to SecondView")
-                    
-                    // Assuming this function is inside a UIViewController
-                    if let currentViewController = UIApplication.shared.keyWindow?.rootViewController {
-                        // Create an instance of the storyboard
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        print("This is executed after a delay of 5 seconds.")
                         
-                        // Instantiate the secondView
-                        if let secondView = storyboard.instantiateViewController(withIdentifier: "secondViewId") as? secondView {
+                        // Assuming this function is inside a UIViewController
+                        if let currentViewController = UIApplication.shared.keyWindow?.rootViewController {
+                            // Create an instance of the storyboard
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             
-                            // Present or push the view controller
-                            if let navigationController = currentViewController as? UINavigationController {
-                                navigationController.pushViewController(secondView, animated: true)
-                            } else {
-                                currentViewController.present(secondView, animated: true, completion: nil)
+                            // Instantiate the secondView
+                            if let secondView = storyboard.instantiateViewController(withIdentifier: "secondViewId") as? secondView {
+                                
+                                // Ensure we're not pushing the same instance twice
+                                if let navigationController = currentViewController as? UINavigationController {
+                                    // Check if the view controller is already in the stack
+                                    if !navigationController.viewControllers.contains(where: { $0 is secondView }) {
+                                        navigationController.pushViewController(secondView, animated: true)
+                                    } else {
+                                        print("secondView is already in the navigation stack.")
+                                    }
+                                } else {
+                                    // If it's not in a navigation controller, present it modally
+                                    currentViewController.present(secondView, animated: true, completion: nil)
+                                }
                             }
                         }
                     }
@@ -192,6 +158,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         return false
     }
-
-    
 }

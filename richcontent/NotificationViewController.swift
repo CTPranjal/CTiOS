@@ -3,16 +3,10 @@
 //  richcontent
 //
 //  Created by Pranjal Choudhary on 28/08/24.
-//
 
-//
-//  NotificationViewController.swift
-//  notificationContent
-//
-//  Created by Pranjal Choudhary on 06/06/23.
-//
-
-
+import UIKit
+import UserNotifications
+import UserNotificationsUI
 import CTNotificationContent
 
 class NotificationViewController: CTNotificationViewController {

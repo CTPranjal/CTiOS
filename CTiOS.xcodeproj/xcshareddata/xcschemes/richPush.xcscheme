@@ -56,8 +56,12 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.deven.Clevertap-ios"
+         RemotePath = "/var/containers/Bundle/Application/CADAF956-982B-4567-8F76-67DF2EBAFA45/CTiOS.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F94866082A14B4D300763861"
@@ -65,7 +69,7 @@
             BlueprintName = "CTiOS"
             ReferencedContainer = "container:CTiOS.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

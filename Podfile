@@ -3,11 +3,11 @@
 target 'CTiOS' do
   use_frameworks!
   # Comment the next line if you don't want to use dynamic frameworks
-  pod 'CleverTap-iOS-SDK'
+  pod 'CleverTap-iOS-SDK', '7.0.1'
   pod 'CleverTapLocation'
 
   target 'richPush' do
-    pod 'CleverTap-iOS-SDK'
+#    pod 'CleverTap-iOS-SDK'
     pod 'CTNotificationService'
   end
   # Pods for CTiOS

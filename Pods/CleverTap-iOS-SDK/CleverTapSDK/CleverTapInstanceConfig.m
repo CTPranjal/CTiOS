@@ -29,7 +29,6 @@
     [coder encodeInt: _encryptionLevel forKey:@"encryptionLevel"];
     [coder encodeObject: _aesCrypt forKey:@"aesCrypt"];
     [coder encodeBool:_enableFileProtection forKey:@"enableFileProtection"];
-    [coder encodeObject:_handshakeDomain forKey:@"handshakeDomain"];
 }
 
 - (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {
@@ -55,7 +54,6 @@
         _encryptionLevel = [coder decodeIntForKey:@"encryptionLevel"];
         _aesCrypt = [coder decodeObjectForKey:@"aesCrypt"];
         _enableFileProtection = [coder decodeBoolForKey:@"enableFileProtection"];
-        _handshakeDomain = [coder decodeObjectForKey:@"handshakeDomain"];
     }
     return self;
 }
@@ -188,7 +186,6 @@
     copy.encryptionLevel = self.encryptionLevel;
     copy.aesCrypt = self.aesCrypt;
     copy.enableFileProtection = self.enableFileProtection;
-    copy.handshakeDomain = self.handshakeDomain;
     return copy;
 }
 
@@ -212,7 +209,6 @@
     _beta = plist.beta;
     _encryptionLevel = isDefault ? plist.encryptionLevel : CleverTapEncryptionNone;
     _enableFileProtection = isDefault ? plist.enableFileProtection : NO;
-    _handshakeDomain = isDefault ? plist.handshakeDomain : nil;
     if (isDefault) {
         _aesCrypt = [[CTAES alloc] initWithAccountID:_accountId encryptionLevel:_encryptionLevel isDefaultInstance:isDefault];
     }
@@ -243,14 +239,6 @@
         _enableFileProtection = enableFileProtection;
     } else {
         CleverTapLogStaticInfo("CleverTap enable file protection for default instance can't be updated from setEnableFileProtection method");
-    }
-}
-
-- (void)setHandshakeDomain:(NSString *)handshakeDomain {
-    if (!_isDefaultInstance) {
-        _handshakeDomain = handshakeDomain;
-    } else {
-        CleverTapLogStaticInfo("CleverTap handshake domain for default instance can't be updated from setHandshakeDomain method");
     }
 }
 @end

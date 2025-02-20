@@ -14,7 +14,6 @@
 @property (nonatomic, assign, readonly) BOOL beta;
 @property (nonatomic, assign, readonly) BOOL disableIDFV;
 @property (nonatomic, assign) BOOL enableFileProtection;
-@property (nonatomic, strong, readonly, nullable) NSString *handshakeDomain;
 @property (nonatomic, readonly) CleverTapEncryptionLevel encryptionLevel;
 
 + (instancetype _Nullable)sharedInstance;

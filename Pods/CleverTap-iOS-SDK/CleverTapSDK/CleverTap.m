@@ -403,7 +403,6 @@ static BOOL sharedInstanceErrorLogged;
         _defaultInstanceConfig.enablePersonalization = [CleverTap isPersonalizationEnabled];
         _defaultInstanceConfig.logLevel = [self getDebugLevel];
         _defaultInstanceConfig.enableFileProtection = _plistInfo.enableFileProtection;
-        _defaultInstanceConfig.handshakeDomain = _plistInfo.handshakeDomain;
         NSString *regionLog = (!_plistInfo.accountRegion || _plistInfo.accountRegion.length < 1) ? @"default" : _plistInfo.accountRegion;
         NSString *proxyDomainLog = (!_plistInfo.proxyDomain || _plistInfo.proxyDomain.length < 1) ? @"" : _plistInfo.proxyDomain;
         NSString *spikyProxyDomainLog = (!_plistInfo.spikyProxyDomain || _plistInfo.spikyProxyDomain.length < 1) ? @"" : _plistInfo.spikyProxyDomain;
@@ -874,7 +873,7 @@ static BOOL sharedInstanceErrorLogged;
     }
     
     // Adds debug flag to show errors and events on the dashboard - integration-debugger when dubug level is set to 3
-    if ([CleverTap getDebugLevel] >= CleverTapLogDebug){
+    if ([CleverTap getDebugLevel] == 3){
         header[@"debug"] = @YES;
     }
     
@@ -1169,11 +1168,7 @@ static BOOL sharedInstanceErrorLogged;
     if (launchOptions && launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {
         NSDictionary *notification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
         CleverTapLogDebug(self.config.logLevel, @"%@: found push notification at launch: %@", self, notification);
-        if ([self.deviceInfo.library isEqualToString:@"Leanplum"]) {
-            CleverTapLogDebug(self.config.logLevel, @"%@: Leanplum will handle the notification: %@", self, notification);
-        } else {
-            [self _handlePushNotification:notification];
-        }
+        [self _handlePushNotification:notification];
     }
 #endif
 }
@@ -1590,10 +1585,6 @@ static BOOL sharedInstanceErrorLogged;
 
 - (void)clearInAppResources:(BOOL)expiredOnly {
     [self.fileDownloader clearFileAssets:expiredOnly];
-}
-
-+ (void)registerCustomInAppTemplates:(id<CTTemplateProducer> _Nonnull)producer {
-    [CTCustomTemplatesManager registerTemplateProducer:producer];
 }
 
 - (CTTemplateContext * _Nullable)activeContextForTemplate:(NSString * _Nonnull)templateName {
@@ -4340,9 +4331,9 @@ static BOOL sharedInstanceErrorLogged;
 - (void)syncWithBlock:(void(^)(void))syncBlock methodName:(NSString *)methodName isProduction:(BOOL)isProduction {
     if (isProduction) {
 #if DEBUG
-        CleverTapLogInfo(_config.logLevel, @"%@: Calling %@ with isProduction:YES from Debug configuration/build. Do not use isProduction:YES in this case", self, methodName);
+        CleverTapLogInfo(_config.logLevel, @"%@: Calling %@: with isProduction:YES from Debug configuration/build. Use syncVariables in this case", self, methodName);
 #else
-        CleverTapLogInfo(_config.logLevel, @"%@: Calling %@ with isProduction:YES from Release configuration/build. Do not release this build and use with caution", self, methodName);
+        CleverTapLogInfo(_config.logLevel, @"%@: Calling %@: with isProduction:YES from Release configuration/build. Do not release this build and use with caution", self, methodName);
 #endif
         [self runSerialAsyncEnsureHandshake:syncBlock];
     } else {

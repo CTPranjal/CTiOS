@@ -17,7 +17,6 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     @IBOutlet weak var phone_ct: UITextField!
     @IBOutlet weak var showCtid: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var circleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,7 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
         // Add tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(copyLabelText))
         showCtid.addGestureRecognizer(tapGesture)
-        CleverTap.sharedInstance()?.recordEvent("iPhone Event")
+//        CleverTap.sharedInstance()?.recordEvent("iPhone Event")
         if let cleverTapID = CleverTap.sharedInstance()?.profileGetID() {
             showCtid.text = cleverTapID
             print("CleverTap ID hello: \(String(describing: cleverTapID))")
@@ -35,9 +34,6 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
         }
         updateImageForCurrentAppearance()
         initializeAppInbox()
-        
-        circleButton.layer.cornerRadius =  circleButton.frame.width / 2
-        circleButton.layer.masksToBounds = true
     }
     
     // This method will be called automatically when system appearance changes
@@ -48,7 +44,6 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
                 updateImageForCurrentAppearance()
             }
         }
-    
     // Update image based on current system appearance (light/dark mode)
         func updateImageForCurrentAppearance() {
             if traitCollection.userInterfaceStyle == .dark {
@@ -66,10 +61,6 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
-    
-    @IBAction func circleButton(_ sender: Any) {
-        CleverTap.sharedInstance()?.recordEvent("Stories")
-    }
     func initializeAppInbox() {
             CleverTap.sharedInstance()?.initializeInbox(callback: ({ (success) in
                 let messageCount = CleverTap.sharedInstance()?.getInboxMessageCount()
@@ -86,7 +77,7 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
                 phone_ct.resignFirstResponder()
                 
                 // Create an empty dictionary to hold profile info
-                var profile: Dictionary<String, Any> = [:]
+        var profile: Dictionary<String, Any> = [:]
                 
                 // Add each field to the profile if it is not empty
                 if let name = name_ct.text, !name.isEmpty {
@@ -110,7 +101,8 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
                     // Pass the profile data to CleverTap
                     CleverTap.sharedInstance()?.onUserLogin(profile)
                     print("User profile sent to CleverTap: \(profile)")
-                } else {
+                }
+                else {
                     print("No data to send, all fields are empty")
                 }
         }
@@ -163,7 +155,7 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     }
     
     @IBAction func Push(_ sender: Any) {
-        CleverTap.sharedInstance()?.recordEvent("t3")
+        CleverTap.sharedInstance()?.recordEvent("Recieved Push")
     }
     
     func registerAppInbox() {
@@ -196,12 +188,13 @@ class ViewController: UIViewController, CleverTapInboxViewControllerDelegate {
     
     @IBAction func webOpen(_ sender: Any) {
         // URL to open
-            if let url = URL(string: "https://www.clevertap.com") {
-                // Open the URL in Safari
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                print("Invalid URL")
-            }
-        CleverTap.sharedInstance()?.recordEvent("Opening Website")
+//            if let url = URL(string: "https://www.clevertap.com") {
+//                // Open the URL in Safari
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            } else {
+//                print("Invalid URL")
+//            }
+//        CleverTap.sharedInstance()?.recordEvent("Opening Website")
+        CleverTap.sharedInstance()?.recordEvent("Stories")
     }
 }

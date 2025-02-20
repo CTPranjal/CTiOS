@@ -7,6 +7,7 @@
 import UserNotifications
 import CleverTapSDK
 import CTNotificationService
+
 class NotificationService: CTNotificationServiceExtension {
 
     var contentHandler: ((UNNotificationContent) -> Void)?
@@ -15,9 +16,17 @@ class NotificationService: CTNotificationServiceExtension {
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        CleverTap.setDebugLevel(3)
         CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData: request.content.userInfo)
-        CleverTap.sharedInstance()?.recordEvent("Recieved Push");
+//      UnreadBadgeManager.shared.incrementBadgeCount()
+        
+        // Increment the badge count
+        UnreadBadgeManager.shared.incrementBadgeCount()
+        // Set the updated badge count in notification payload
+        bestAttemptContent?.badge = NSNumber(value: UnreadBadgeManager.shared.getBadgeCount())
+        
         super.didReceive(request, withContentHandler: contentHandler)
+        
     }
 }
 
